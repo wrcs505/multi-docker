@@ -15,7 +15,7 @@ after_success:
  - docker build -t wrcs505/multi-server ./server
  - docker build -t wrcs505/multi-worker ./worker
  # Login to Docker CLI
- - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --pwassword-stdin
+ - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
  # Take images and push to Docker Hub
  - docker push wrcs505/multi-client
  - docker push wrcs505/multi-nginx
