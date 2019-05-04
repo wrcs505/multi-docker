@@ -7,7 +7,7 @@ before_install:
   - docker build -t wrcs505/react-test -f ./client/Dockerfile.dev ./client
 
 script:
- - docker run wrcs505/react-test npm test -- --cover
+ - docker run wrcs505/react-test npm test -- --covererage
 
 after_success:
  - docker build -t wrcs505/multi-client ./client
